@@ -14,7 +14,10 @@ function App() {
     email: '',
     location: '',
     weight:'',
-    companyName:''
+    companyName:'',
+    TIN:0,
+    regDate:''
+
   });
 
   const handleChange = (e) => {
@@ -75,7 +78,7 @@ function App() {
             </div>
             <div className="col">
               <label class="form-label">Nationality</label>
-              <input type="email" class="form-control" id="nationality" value={formData.nationality} onChange={handleChange} required/>
+              <input type="text" class="form-control" id="nationality" value={formData.nationality} onChange={handleChange} required/>
             </div>
             
           </div>
@@ -135,11 +138,11 @@ function App() {
           <div className="row mb-3">
             <div className="col">
                 <label class="form-label">TIN number</label>
-                <input type="number" class="form-control" placeholder="Enter TIN number" id="TIN" value={formData.surname} onChange={handleChange}required />
+                <input type="number" class="form-control" placeholder="Enter TIN number" id="TIN" value={formData.TIN} onChange={handleChange}required />
             </div>
             <div className="col">
               <label class="form-label">Registration date</label>
-              <input type="date" class="form-control" placeholder="Select date" value={formData.surname} onChange={handleChange} id="regDate" />
+              <input type="date" class="form-control" placeholder="Select date" value={formData.regDate} onChange={handleChange} id="regDate" />
             </div>
             <div className="col"></div>
           </div>
@@ -148,7 +151,7 @@ function App() {
           <div class="row mb-3">
             <div className="col">
               <label class="form-label">Location</label>
-              <input type="location" class="form-control" placeholder="District: Enter district" id="district" value={formData.surname} onChange={handleChange} required/>
+              <input type="location" class="form-control" placeholder="District: Enter district" id="district" value={formData.district} onChange={handleChange} required/>
             </div>
             <div className="col"></div>
             <div className="col"></div>
@@ -180,7 +183,7 @@ function App() {
             </div>
             <div className="col">
             <label class="form-label">Specify purpose of importation</label>
-              <input type="text" class="form-control" id="purpose" value={formData.surname} onChange={handleChange} required/>
+              <input type="text" class="form-control" id="purpose" value={formData.purpose} onChange={handleChange} required/>
             </div>
             <div className="col"></div>           
               
